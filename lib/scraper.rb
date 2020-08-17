@@ -25,11 +25,8 @@ class Scraper
     profile_hash = {}
 
     profile_data.each do |d|
-      profile_hash[:name] = d.css(".profile-name").text
-      profile_hash[:location] = d.css(".profile-location").text
-      profile_hash[:profile_quote] = d.css(".profile-name").text
-      profile_hash[:bio] = d.css(".profile-name").text
-
+      profile_hash[:profile_quote] = d.css(".profile-quote").text
+      profile_hash[:bio] = d.css(".description-holder p").text
         d.css(".social-icon-container a").each do |x|
           case
           when x.attr("href").include?("twitter")
@@ -38,19 +35,11 @@ class Scraper
             profile_hash[:linkedin] = x.attr("href")
           when x.attr("href").include?("github")
             profile_hash[:github] = x.attr("href")
+          else
+            profile_hash[:blog] = x.attr("href")
           end
         end
       end
-      # binding.pry
       profile_hash
-      # profile_hash[:name] = d.css(".profile-name").text
-      # profile_hash[:name] = d.css(".profile-name").text
-
-      # :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
-      # d.css(".social-icon-container a")[0].attr("href")
-
-
   end
-
-
 end
