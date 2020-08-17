@@ -21,6 +21,9 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
+    attributes_hash.each do |key, value|
+      instance_variable_set("@#{key}", value)
+    end
     binding.pry
   end
 
