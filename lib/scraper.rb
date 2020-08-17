@@ -44,7 +44,7 @@ class Scraper
           end
         end
       end
-      # binding.pry
+      binding.pry
       profile_hash
 
       # :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
