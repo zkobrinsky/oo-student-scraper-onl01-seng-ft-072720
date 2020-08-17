@@ -8,7 +8,7 @@ class Student
     student_hash.each do |key, value|
       instance_variable_set("@#{key}", value)
     end
-end
+  end
 
   end
 
