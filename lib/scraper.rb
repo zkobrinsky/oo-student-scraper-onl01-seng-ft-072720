@@ -27,8 +27,10 @@ class Scraper
     profile_data.each do |d|
       profile_hash[:name] = d.css(".profile-name").text
       profile_hash[:location] = d.css(".profile-location").text
-      profile_hash[:profile_quote] = d.css(".profile-name").text
-      profile_hash[:bio] = d.css(".profile-name").text
+      profile_hash[:profile_quote] = d.css(".profile-quote").text
+      binding.pry
+      
+      # profile_hash[:bio] = d.css(".profile-name").text
 
         d.css(".social-icon-container a").each do |x|
           case
