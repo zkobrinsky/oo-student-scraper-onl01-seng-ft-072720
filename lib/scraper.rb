@@ -43,12 +43,8 @@ class Scraper
       end
       # binding.pry
       profile_hash
-      # profile_hash[:name] = d.css(".profile-name").text
-      # profile_hash[:name] = d.css(".profile-name").text
 
       # :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
-      # d.css(".social-icon-container a")[0].attr("href")
-
 
   end
 
