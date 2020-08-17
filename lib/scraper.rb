@@ -37,11 +37,12 @@ class Scraper
             profile_hash[:blog] = x.attr("href")
           end
         end
+        profile_hash[:profile_quote] = d.css(".profile-quote").text
+        profile_hash[:bio] = d.css(".description-holder p").text
+        profile_hash[:name] = d.css(".profile-name").text
+        profile_hash[:location] = d.css(".profile-location").text
       end
-      profile_hash[:profile_quote] = d.css(".profile-quote").text
-      profile_hash[:bio] = d.css(".description-holder p").text
-      profile_hash[:name] = d.css(".profile-name").text
-      profile_hash[:location] = d.css(".profile-location").text
+
 
 
       # binding.pry
