@@ -18,6 +18,7 @@ class Student
 
   def self.create_from_collection(students_array)
     binding.pry
+    students_array.each.tap{|o| o = Student.new(self)}
 
   end
 
