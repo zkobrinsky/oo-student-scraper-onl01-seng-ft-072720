@@ -8,6 +8,11 @@ class Student
     student_hash.each do |key, value|
       instance_variable_set("@#{key}", value)
     end
+    save
+  end
+
+  def save
+    @@all << self
   end
 
 
