@@ -43,7 +43,7 @@ class Scraper
           end
         end
       end
-      binding.pry
+      # binding.pry
       profile_hash
   end
 
