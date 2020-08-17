@@ -42,6 +42,8 @@ class Scraper
             profile_hash[:linkedin] = x.attr("href")
           when x.attr("href").include?("github")
             profile_hash[:github] = x.attr("href")
+          else
+            profile_hash[:blog] = x.attr("href")
           end
         end
       end
